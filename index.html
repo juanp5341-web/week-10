@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Civic Type R — Track-Ready Icon</title>
+
+  <!-- SVG favicon (crisp at small sizes) -->
+  <link rel="icon" type="image/svg+xml" href="assets/svg/logo.svg" />
+
+  <meta name="description" content="Showcase card demonstrating image optimization, WebP, and SVG favicon for a Civic Type R product page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Civic Type R — Track-Ready Icon</h1>
+  </header>
+
+  <main class="wrap">
+    <article class="card" aria-labelledby="product-title">
+      <!-- Prefer WebP with JPG/PNG fallback -->
+      <picture>
+        <source srcset="assets/images/civic.webp" type="image/webp" />
+        <img
+          src="assets/images/civic-optimized.jpg"
+          alt="Rear three-quarter of a Civic Type R in a garage, wing and diffuser visible"
+          width="1200" height="1800"
+          loading="lazy"
+          class="product-img"
+        />
+      </picture>
+
+      <div class="card-body">
+        <h2 id="product-title" class="h5">Aero, grip, and a roaring turbo.</h2>
+        <p class="muted">
+          This Civic Type R showcase focuses on lightweight tuning and functional aero.
+          Optimized imagery keeps the page fast while showing off that signature wing.
+        </p>
+
+        <button class="btn" id="learnMoreBtn" aria-describedby="learnMoreNote">
+          View Specs
+        </button>
+        <p id="learnMoreNote" class="sr-only">Opens a small dialog with highlight specs.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Created by Juan Perez • Images optimized in Photoshop • Uses WebP with JPG fallback
+    </p>
+  </footer>
+
+  <!-- Small details dialog -->
+  <dialog id="productDialog" class="modal">
+    <h3 class="h5">Civic Type R — Highlights</h3>
+    <ul>
+      <li>Engine: 2.0L turbo inline-4</li>
+      <li>Drivetrain: 6-speed manual, LSD</li>
+      <li>Aero: Large rear wing, functional diffuser, brake cooling</li>
+    </ul>
+    <form method="dialog">
+      <button class="btn btn-secondary">Close</button>
+    </form>
+  </dialog>
+
+  <script src="app.js" defer></script>
+
+<!--
+README Notes for Submission
+===========================
+
+• civic-optimized.jpg — compressed in Photoshop using Save for Web (75% quality, resized to ~1200px tall)
+• civic.webp — exported from Photoshop using Save a Copy → WebP (70% quality)
+• logo.svg — used as favicon because it’s infinitely scalable and crisp at small sizes
+-->
+
+</body>
+</html>
